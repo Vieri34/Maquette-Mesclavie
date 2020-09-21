@@ -1,0 +1,140 @@
+h1, h2, h3 ,h4, h5 {color:white;}
+h1 {}
+h2 {font-size: 2em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.2em;}
+h5 {}
+
+article {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
+	margin-bottom:10vh;
+}
+span#left {
+	align-self:flex-start;
+	display:block;
+	width:40%;
+}
+span#right {
+	align-self:center;
+	display:block;
+	width:42%;
+}
+h3 {
+	display:block;
+	position:relative;
+	width:100%;
+}
+h4.list {
+	display:block;
+	position:relative;
+	box-sizing:border-box;
+}
+h4.hero {
+	font-size:1.6em;
+	width:20%;
+}
+a.link {
+	display:block;
+	width:80%;
+	background-color:#a02620;
+	text-decoration:none;
+	color:white;
+	padding:1rem;
+	text-align:center;
+}
+a.link:hover {
+	opacity:80%;
+	background-color:white;
+	color:#a02620;
+	transition:0.5s;
+}
+figure img {
+	display:inline-block;
+	position:relative;
+	max-width:50vw;
+	max-height:50vh;
+	padding:1rem;
+}
+figure.right {
+	align-self:flex-start;
+	display:block;
+	width:40%;
+}
+figure.left {
+	align-self:flex-end;
+	display:block;
+	width:40%;
+}
+figure:hover {
+	animation: 5s ease-in-out basique;
+	z-index:35;
+}
+figure:hover {
+	opacity:80%;
+	transition:0.5s;
+}
+
+@keyframes basique {
+    from { opacity: 1; scale: 100%;}
+	50%  { opacity: 1; scale: 110%;}
+	to   { opacity: 1; scale: 100%;}
+}
+article + img {
+	max-width:50px;
+}
+
+
+@media screen and (max-width: 1050px){
+article {
+	display:flex;
+	flex-flow:column wrap;
+	flex-template-columns:1;
+	flex-template-rows:auto;
+	justify-content:center;
+	align-items:space-around;
+}
+p {
+	display:inline-block;
+	position:relative;
+	color: rgba(255, 255, 255, 0.8);
+	box-sizing:border-box;
+}
+p, .hero {
+	font-size:1.2em;
+	width:80%;
+	text-align:left;
+	margin-left:1vw;
+}
+figure ~ a {
+	display:block;
+	width:80%;
+	background-color:#a02620;
+	text-decoration:none;
+	color:white;
+	padding:1rem;
+	text-align:center;
+}
+figure ~ a:hover {
+	opacity:80%;
+	background-color:white;
+	color:#a02620;
+	transition:0.5s;
+}
+figure img {
+	display:block;
+	position:relative;
+	max-width:80vw;
+	max-height:80vh;
+	padding:1rem;
+}
+article + img {
+	max-width:50px;
+}
+}
+
+div, img {
+    display:none;
+}
