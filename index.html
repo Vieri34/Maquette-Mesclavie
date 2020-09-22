@@ -1,57 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="title" content="Mesclavie">
-<meta name="description" content="Mesclavie propose des spectacles vivants, de l'art de rue et des animations d'évènements.">
-<title>Mesclavie</title>
-<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="images/assets/favicon.png">
-<link href="css/base.css" rel="stylesheet" media="all" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Mesclavie">
+  <meta name="description" content="Mesclavie propose des spectacles vivants, de l'art de rue et des animations d'évènements.">
+  <title>Mesclavie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/assets/favicon.png">
+  <link href="css/base.css" rel="stylesheet" media="all" type="text/css">
 </head>
 <body id="accueil">
 
-<header>
+  <header>
+    <nav id="page-nav">
+      <label for="hamburger">&#9776;</label>
+          <input type="checkbox" id="hamburger"/>
 
-  <a class="logo" href="index.html"><img src="images/full_logo.png" alt="logo de mesclavie"/></a>
+          <a class="logo" href="index.html"><img src="images/logo2.png" alt="logo de mesclavie"/></a>
+          <a href="index.html"><h1>Mesclavie</h1></a>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Spectacles ▼</a>
+              <ul>
+                <li><a href="#">Mémoire Imaginaire</a></li>
+                <li><a href="#">Greg l'Accordéoniste</a></li>
+                <li><a href="#">Les Free Sonneurs</a></li>
+              </ul>
+            </li>
+            <li><a href="#">La Bobine ▼</a>
+              <ul>
+                <li><a href="#">Beblibop</a></li>
+                <li><a href="#">L’autruche Volante</a></li>
+                <li><a href="index.html">Mesclavie</a></li>
+              </ul>
+            </li>
+            <li><a href="#">On est passé par là</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+    </nav>
+  </header>
+<!-- site -->
+  <main class="container">
+<!-- parallax -->
+    <section class="images">
+      <div class="zine-images">
+        <figure class="zine-image"><a href="#"><img alt="memoires" src="images/spectacle.jpg"></a>
+          <figcaption class="captionCool"><a href="#">Memoire Imaginaire</a></figcaption>
+        </figure>
+        <figure class="zine-image"><a href="#"><img alt="greg l'accordeoniste" src="images/greg_l_accordeoniste.jpg"></a>
+          <figcaption class="captionCool"><a href="#">Greg l'Accordéoniste</a></figcaption>
+        </figure>
+        <figure class="zine-image"><a href="#"><img alt="free sonneurs" src="images/rue4v2.jpg"></a>
+          <figcaption class="captionCool"><a href="#">Les Free Sonneurs</a></figcaption>
+        </figure>        
+      </div>
+    </section>
 
-  <nav id="page-nav">
-    <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger"/>
-        
-        <ul>
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="#">Spectacles</a>
-            <ul>
-              <li><a href="#">Mémoire Imaginaire</a></li>
-              <li><a href="#">Greg l'Accordéoniste</a></li>
-              <li><a href="#">Les Free Sonneurs</a></li>
-            </ul>
-          </li>
-          <li><a href="#">La Bobine</a>
-            <ul>
-              <li><a href="#">Beblibop</a></li>
-              <li><a href="#">L’autruche Volante</a></li>
-              <li><a href="index.html">Mesclavie</a></li>
-            </ul>
-          </li>
-          <li><a href="#">On est passé par là</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-  </nav>
-</header>
-<section class="container">
-  <div class="zine-images">
-    <div class="zine-image"><a href="#"><img alt="memoires" src="images/spectacle.jpg"></a></div>
-    <div class="zine-image"><a href="#"><img alt="greg l'accordeoniste" src="images/greg_l_accordeoniste.jpg"></a></div>
-    <div class="zine-image"><a href="#"><img alt="free sonneurs" src="images/rue4.jpg"></a></div>
-    
-  </div>
-</section>
-<footer id="footer">
-  <p class="footer"><img class="first" src="images/assets/megaphone.png"/>Contactez Manue au <span class="inline1">06.84.10.30.76</span> ou Matthieu au <span class="inline1">06.32.36.81.54</span> ou par <a href="mailto:mesclavie@gmail.com">mail</a><img class="second" src="images/assets/megaphone.png"/></p>
-</footer>
-
+<!-- text -->
+    <section class="sectionText">
+      <a href="images/logo2.png"><img src="images/logo2.png" alt="logo mesclavie"></a>
+      <div class="text">
+        <h2>Mesclavie</h2>
+        <p>L'association Mesclavie souhaite avant tout faire passer un message au plus grand nombre : l'importance du lien social. Dans cette optique, l'association Mesclavie a su se diversifier et ainsi trouver sa place dans différents domaines :<br>
+          •  pédagogique,<br>
+          •  culturel (créations scéniques, sculptures)<br>
+          •  artisanal (couture, structures nomades).<br>
+          •  l'événementiel</p>
+      </div>
+    </section>
+  </main>
+<!-- footer -->
+  <footer id="footer">
+    <p class="footer"><img class="first" src="images/assets/megaphone.png"/>Contactez Manue au <span class="inline1">06.84.10.30.76</span> ou Matthieu au <span class="inline1">06.32.36.81.54</span> ou par <a href="mailto:mesclavie@gmail.com">mail</a><img class="second" src="images/assets/megaphone.png"/></p>
+  </footer>
 </body>
 </html>

@@ -3,6 +3,10 @@
 	font-family: Quartzo; src: url(../fonts/QUARTZO.ttf);
 }
 
+@font-face {
+	font-family: Starfih; src: url(../fonts/Starfish.ttf);
+}
+
 /* all */
 * {
 	margin: 0;
@@ -18,42 +22,57 @@ body {
 	font-family: "Quartzo";
 }
 
-nav, footer, #page-nav ul li ul {
-	background:linear-gradient(150deg, #8b1c16, rgb(170, 93, 48));
-}
-
 a {
 	text-decoration: none;
 }
 
 /* nav */
 header {
-	background: url(../images/fond_blanc.jpg) fixed no-repeat center center;
-	background-size: cover;
+	position: absolute;
+	top: 0;
 	width: 100%;
-}
-
-header a {
-	display: flex;
-	justify-content: center;
-}
-
-header img {
-	display: flex;
-	width: 30%;
-	margin: 5px;
+	z-index: 50;
 }
 
 #page-nav {
 	display: flex;
 	flex-wrap: nowrap;
+	justify-content: flex-end;
 	align-items: center;
 	width: 100%;
     height: 6vh;
 }
 
+#page-nav a {
+	letter-spacing: 1px;
+}
+
 #page-nav label, #hamburger {
   display: none;
+}
+
+#page-nav img {
+	width: 75px;
+	margin: 15px 0 0 15px;
+	transition: 0.5s ease-in-out;
+}
+
+#page-nav img:hover {
+	transform: scale(1.05);
+}
+
+
+#page-nav h1 {
+	font-size: 3em;
+	color: white;
+	-webkit-text-stroke: 2px;
+	-webkit-text-stroke-color: #ae201f;
+	margin-left: 15px;
+	transition: 0.5s ease-in-out;
+}
+
+#page-nav h1:hover {
+	transform: scale(1.05);
 }
 
 #page-nav ul {
@@ -62,7 +81,7 @@ header img {
 }
 
 #page-nav ul li {
-	  display: inline-block;
+	display: inline-block;
   	position: relative;
   	padding: 1.2vw;
 }
@@ -71,6 +90,8 @@ header img {
   	color: #fff;
 	font-size: 1.3em;
 	letter-spacing: 1px;
+	-webkit-text-stroke: 1px;
+	-webkit-text-stroke-color: #ae201f;
 }
 
 #page-nav ul li ul {
@@ -90,37 +111,116 @@ header img {
 }
 
 /* main */
-.container {
-	background: url(../images/fond_jaune.jpg) fixed no-repeat center center;
-	background-size: cover;
+main {
 	display: flex;
-	flex-flow: row wrap;
+	flex-wrap: wrap;
 }
-  
+/* parallax */
+.images {
+	width: 100%;
+	height: 100vh;
+}
+
 .zine-images {
 	margin-left: auto ;
 	margin-right: auto ;
 	display: flex;
 	align-items: center;
-	animation-duration: 3s;
-	max-width: 90%;
 }
   
 .zine-image {
-	padding: 1.5rem;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	width: 100%;
+	height: 100vh;
 }
   
 .zine-image img {
 	width: 100%;
-	transition: ease-in-out 0.4s;
+	height: 100vh;
+	object-fit: cover;
+	filter: brightness(75%);
+	transition: 0.5s ease-in-out;
 }
 
 .zine-image img:hover {
-	filter: hue-rotate(90deg);
-	transform: translateY(-8pt);
+	filter: brightness(100%);
+}
+
+.captionCool {
+	position: relative;
+	left: 5%;
+	bottom: 50%;
+}
+
+.captionCool a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Starfish, sans-serif;
+	text-transform: capitalize;
+	font-size: 2.5vw;
+	letter-spacing: 8px;
+	color: white;
+	transition: 0.5s ease-in-out;
+}
+
+.captionCool a:hover {
+	transform: scale(1.05);
+}
+
+/* div text */
+.sectionText {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	background: url(../images/fond_jaune.jpg) fixed no-repeat center center;
+	background-size: cover;
+}
+/*
+.sectionText::after {
+	content: "";
+    background: url(../images/image-defile.png) repeat-x center center;
+	position: absolute;
+	top: -220px;
+	width: 100%;
+	height: 100%;
+}
+*/
+
+.sectionText img {
+	height: 30vh;
+	margin: 25px;
+	transition: 0.5s ease-in-out;
+}
+
+.sectionText img:hover {
+	transform: scale(1.05);
+}
+
+.text {
+	flex: 1;
+	padding: 60px 80px;
+}
+
+.text h2 {
+	font-family: Quartzo;
+	font-size: 2.5em;
+	letter-spacing: 1px;
+	color: white;
+	text-decoration: underline;
+	padding: 15px 0;
+}
+
+.text p {
+	font-family: Acme;
+	font-size: 1.3em;
+	line-height: 24px;
+	text-align: justify;
+    color: white;
 }
 
 /* footer */
@@ -129,7 +229,7 @@ footer {
 	width: 100%;
 	height: 2.5vh;
 	color: white;
-	
+	background: #ae201f;
 	padding: 1rem;
 	font-size: 1.3em;
 	letter-spacing: 1px;
@@ -157,6 +257,7 @@ p.footer {
 
 p a {
 	color: #c58700;
+	text-decoration: underline;
 }
 
 p a:hover {
